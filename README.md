@@ -14,12 +14,12 @@ Whatsapp message +14155238886 with "join negative-sheep" . Checkout the code and
 
 
 # Advantages :
--Real Time moitoring of Nifty 50 Index
--WhatsApp and Email alert notification 
+*Real Time moitoring of Nifty 50 Index
+*WhatsApp and Email alert notification 
 
 # Incapabilities 
--NO trade decisions can be taken 
--Only Nifty 0 index is monitored 
+*NO trade decisions can be taken 
+*Only Nifty 0 index is monitored 
 
 # About the author :
 I decided to build this tool to help friends take trade desicions without the need to monitor the nifty 50 market . Safe time and use their 
