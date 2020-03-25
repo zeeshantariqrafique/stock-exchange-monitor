@@ -7,7 +7,7 @@ from_whatsapp_number='whatsapp:+14155238886'
 
 def sendWhatsApp(list_numbers,nifty_change):
     msg = '''Hi, 
-        This message is to inform you that Nifty 50 Index has changed by ''' + str(nifty_change) + '%' + 'as of' + str(datetime.now())
+        This message is to inform you that Nifty 50 Index has changed by ''' + str(nifty_change) + '%' + ' as of ' + str(datetime.now())
     for number in list_numbers:  
         to_num ='whatsapp:' + number
         client= Client()
