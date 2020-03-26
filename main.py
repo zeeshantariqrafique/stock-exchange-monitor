@@ -21,10 +21,11 @@ df['Phone'] = df['Phone'].apply(lambda x: '+91' + str(x)) #Hardcoding +91 ext on
 
 
 nse = Nse()
-d = nse.get_index_quote("nifty 50")
+
 # Yes , while true is bad practice , For now kept 30 mins sleep ..hardcoding will be made configurable later
 while(True):
     print('Checking NIFTY 50 now : '+str(datetime.now()))
+    d = nse.get_index_quote("nifty 50")
     for key , value in d.items():
         if key == "pChange":
             #Check if the percentage change is negative or positive , If negative send whatsapp
