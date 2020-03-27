@@ -29,7 +29,7 @@ while(True):
     for key , value in d.items():
         if key == "pChange":
             #Check if the percentage change is negative or positive , If negative send whatsapp
-            if value < 0:
+            if float(value) < 0:
                 whatsapp.sendWhatsApp(df['Phone'],value)
             else:
                 print('Not sending notification as change is postive  : '+str(value))
