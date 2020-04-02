@@ -20,6 +20,6 @@ def sendWhatsApp(list_numbers,nifty_change):
         return False
 
 
-
-testlist=['+918805550779']
-assert sendWhatsApp(testlist,10)
+if __name__ == "__main__":
+    testlist=['+918805550779']
+    assert sendWhatsApp(testlist,10)
