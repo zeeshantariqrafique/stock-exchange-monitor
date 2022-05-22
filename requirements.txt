@@ -1,0 +1,4 @@
+nsetools==1.0.11
+twilio==7.9.1
+pandas==1.2.4
+secure-smtplib==0.1.1
