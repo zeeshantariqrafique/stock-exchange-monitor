@@ -1,5 +1,5 @@
-whatsapp:
-  contact_path: "D://file//contacts.xlsx"
-email:
+app:
+  sleep_in_minutes: 30
+  contact_path: "contacts.xlsx"
   sender_email: please_change_me@app.com
   sender_password: please_change_me_I_am_a_credential

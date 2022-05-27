@@ -7,17 +7,15 @@ import time
 import yaml
 import pandas as pd
 
-if __name__ == "__main__":
+def main():
     #Load the config file , See nse.yml
     with open(r'nse.yml') as file:
         data = yaml.full_load(file)
     
-    config = {}
-    
-    for k , v in {**data["whatsapp"],**data["email"]}.items():
-        config[k] = v
-        
+    config = {**data["app"]}
+
     df = pd.read_excel(config['contact_path'])
+
     df['Phone'] = df['Phone'].apply(lambda x: '+91' + str(x)) #Hardcoding +91 ext on India , Should be enhanced later
     nse = Nse()
 
@@ -30,10 +28,12 @@ if __name__ == "__main__":
                 #Check if the percentage change is negative or positive , If negative send whatsapp
                 if float(value) < 0:
                     whatsapp.sendWhatsApp(df['Phone'],value)
-                    #print(df['Email'])
-                    #print(df['Email'].tolist())
                     mail.sendMailTo(config['sender_email'],config['sender_password'],df['Email'].dropna().tolist(),value)
                 else:
                     print('Not sending notification as change is postive  : '+str(value))
         print('Going to sleep for 30 mins at '+ str(datetime.now()))
-        time.sleep(60*30) # 30 mins sleep and check again
+        time.sleep(int(config['sleep_in_minutes'])) 
+
+
+if __name__ == "__main__":
+    main()
