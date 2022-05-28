@@ -1,4 +1,4 @@
-![example workflow](https://github.com/zeeshantariqrafique/stock-exchange-monitor/tree/master/.github/workflows/main.yaml/badge.svg)
+![master](https://github.com/zeeshantariqrafique/stock-exchange-monitor/tree/master/.github/workflows/main.yaml/badge.svg?event=push)
 
 # nse_api
 
