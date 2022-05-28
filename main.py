@@ -1,4 +1,3 @@
-import nsetools
 import whatsapp
 from datetime import datetime
 from nsetools import Nse
