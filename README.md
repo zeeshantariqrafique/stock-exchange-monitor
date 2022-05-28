@@ -1,3 +1,5 @@
+![example workflow](https://github.com/zeeshantariqrafique/stock-exchange-monitor/tree/master/.github/workflows/main.yaml/badge.svg)
+
 # nse_api
 
 This is a small tool to monitor and notify the NIFTY 50 index of the indian stock market 
