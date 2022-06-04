@@ -20,7 +20,7 @@ def main():
 
     # Yes , while true is bad practice , For now kept 30 mins sleep ..hardcoding will be made configurable later
     while(True):
-        print('Checking NIFTY 50 now : '+str(datetime.now()))
+        print(f'Checking NIFTY 50 now : {str(datetime.now())}')
         d = nse.get_index_quote("nifty 50")
         for key , value in d.items():
             if key == "pChange":
@@ -30,8 +30,9 @@ def main():
                     mail.sendMailTo(config['sender_email'],config['sender_password'],df['Email'].dropna().tolist(),value)
                 else:
                     print('Not sending notification as change is postive  : '+str(value))
-        print('Going to sleep for 30 mins at '+ str(datetime.now()))
-        time.sleep(int(config['sleep_in_minutes'])) 
+        sleep = config['sleep_in_minutes']
+        print(f'Going to sleep for {sleep} mins at {str(datetime.now())}')
+        time.sleep(int(sleep)) 
 
 
 if __name__ == "__main__":
